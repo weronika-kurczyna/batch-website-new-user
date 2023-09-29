@@ -16,11 +16,21 @@ When you will see that this user exists,  you can create a customer in Voucherif
 ## Guide
 
 1. After cloning this repository locally you can open it in code editor like WebStorm (JetBrains) or Visual Studio Code.
+To open the page in WebStorm just right-click on `index.html` and select **Open In -> Browser**.
 2. To run this in VSC you will need to use Live Server (it can be downloaded from Extension tab). After install, right-click on the `index.html` file and select `Open With Live Server`.
-3. In order for your site to be able to send requests to Batch, you need to add it to `allowed origins`. To do this, go to **Settings -> Push Settings -> Allowed dev origins** and paste here your page url, for example: `http://127.0.0.1:5500/index.html`
-4. After completing this step and opening the page again, no errors should be displayed in the console, only the following information:
+Batch Dashboard:
+1. Log in to your account.
+2. Click `Add a new app or website` (or select already created website from the list)
+3. Select `Web`, click `Continue`.
+4. Enter the URL of your locally hosted website, for example: `http://127.0.0.1:5500/index.html`
+5. Enter the website name. Click `Add your website`.
+6. Add team members.
+7. From the modal section: `Setup the SDK` copy the fragment with credentials: `batchSDK('setup', {...})`
+8. Find the place in `index.html` with similar code and replace it. 
+9. In order for your site to be able to send requests to Batch, you need to add it to `allowed origins`. To do this, go to **Settings -> Push Settings -> Allowed dev origins** and paste here your page url, for example: `http://127.0.0.1:5500/index.html`
+10. After completing this step and opening the page again, no errors should be displayed in the console, only the following information:
    - Batch - Starting version 3.5.0 in development mode. Environment: Fully secure
    - Batch - Installation ID: <installation_id>
-5. To open the page in WebStorm just right-click on `index.html` and select **Open In -> Browser**.
 
 important: The id you set in HTML file by: `batchSDK(api => {api.setCustomUserID("test_batch_user")});` will be the custom user ID that you will find in **Settings -> Debug** in Batch Dashboard.
+important: do not share your keys outside Batch.
