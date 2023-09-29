@@ -31,6 +31,7 @@ Batch Dashboard:
 10. After completing this step and opening the page again, no errors should be displayed in the console, only the following information:
    - Batch - Starting version 3.5.0 in development mode. Environment: Fully secure
    - Batch - Installation ID: <installation_id>
+11. After completing above steps, you should be able to search for the user in **Settings -> Debug** using Custom User ID or Installation ID.
 
 important: The id you set in HTML file by: `batchSDK(api => {api.setCustomUserID("test_batch_user")});` will be the custom user ID that you will find in **Settings -> Debug** in Batch Dashboard.
 important: do not share your keys outside Batch.
