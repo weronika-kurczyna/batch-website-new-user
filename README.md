@@ -22,16 +22,17 @@ Batch Dashboard:
 1. Log in to your account.
 2. Click `Add a new app or website` (or select an already created website from the list)
 3. Select `Web`, click `Continue`.
-4. Enter the URL of your locally hosted website, for example: `http://127.0.0.1:5500/index.html`
+4. Enter the URL of your locally hosted website, for example: `http://localhost:5500/index.html`
 5. Enter the website name. Click `Add your website`.
 6. Add team members.
 7. From the modal section: `Setup the SDK` copy the fragment with credentials: `batchSDK('setup', {...})`
-8. Find the place in `index.html` with a similar code snippet and replace it. 
-9. In order for your site to be able to send requests to Batch, you need to add it to `allowed origins`. To do this, go to **Settings -> Push Settings -> Allowed dev origins** and paste here your page url, for example: `http://127.0.0.1:5500/index.html`
-10. After completing this step and opening the page again, no errors should be displayed in the console, only the following information:
+8. Find the place in `index.html` with a similar code snippet and replace it. Save your changes.
+9. Use `ngrok http 5500` in Terminal to create Https URL that will be accepted by Batch. 
+10. In order for your site to be able to send requests to Batch, you need to add it to `allowed origins`. To do this, go to **Settings -> Push Settings -> Allowed dev origins** and paste here your page url, for example: `https://8d7b-85-222-34-86.ngrok-free.app`
+11. After completing this step and opening the page again, no errors should be displayed in the console, only the following information:
    - Batch - Starting version 3.5.0 in development mode. Environment: Fully secure
    - Batch - Installation ID: <installation_id>
-11. After completing the above steps, you should be able to search for the user in **Settings -> Debug** using Custom User ID or Installation ID.
+12. After completing the above steps, you should be able to search for the user in **Settings -> Debug** using Custom User ID or Installation ID.
 
 Important: The id you set in HTML file by using: `batchSDK(api => {api.setCustomUserID("test_batch_user")});` will be the custom user ID that you will find in **Settings -> Debug** in Batch Dashboard.
 Important: do not share your keys outside Batch.com.
